@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One');
+
+body {
+  background-color: #cf4646;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+/**Nav stuff **/
+nav {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.nav a{
+  color: #FFFFFF;
+  font-size: 16pt;
+  font-weight: lighter;
+}
+
+.nav a:hover{
+  background-color: #fff !important;
+  color: black !important;
+}
+
+/** Page Headings **/
+.main-header {
+  font-size: 46px;
+}
+
+.main-subheading {
+  font-size: 30px;
+}
+
+/** Main Containers **/
+.main-container {
+  font-weight: 100;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.gallery {
+  margin: 0;
+}
+
+.add-image {
+  font-size: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-image input {
+  align-self: center;
+}
+
+/** Gallery **/
+.image-container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image {
+  margin-right: 20px;
+  margin-bottom: 50px;
+  background-color: rgba(255,255,255,0.8);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.image img{
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+}
+
+
+/** Button stuff */
+.btn {
+  color: black;
+  background: white;
+  padding: 15px;
+  font-size: 20px;
+}
+.btn:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.gulp-btn {
+  display: flex;
+  flex-flow: column;
+}
+a p {
+  font-family: 'Fugaz One', cursive;
+
+  font-size: 24px;
+  padding-top: 150px;
+  position: absolute;
+  align-self: center;
+  color: black;
+
+
+}
+
+a p:hover {
+  color: #cf4646;
+}
+
+.inputfile{
+	width: 0.1px;
+  display: block;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.add {
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 40px !important;
+  padding: 0 17px 0 17px !important;
+  border-radius: 50% !important;
+}
+.add:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+.submit {
+  font-size: 15px !important;
+  padding: 10px !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.alert-wrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.alert  {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+}
+
+.alert-danger {
+  color: maroon;
+}
