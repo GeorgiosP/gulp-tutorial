@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     jshint = require('gulp-jshint'),
-    cleanCSS = require('gulp-clean-css')
+    uglify = require('gulp-uglify'),
+    concat = require("gulp-concat"),
+    babel  = require('gulp-babel')
     /*
     This task will take the uses of nodemon and add in some
     useful things to it like better code hinting using jshint
@@ -24,14 +26,16 @@ gulp.task('develop', function() {
         })
 })
 
-gulp.task('minify-css', function() {
-    return gulp.src('public/stylesheets/*.css')
-        .pipe(cleanCSS({
-            debug: true
-        }, function(details) {
-          console.log(details.name + ': ' + details.stats.orginalSize);
-          console.log(details.name + ': ' + details.stats.minifiedSize);
-
-        }))
-          .pipe(gulp.dest('public/stylesheets/'));
+/*
+this will take our script file and minify it
+to script.min.js
+*/
+gulp.task("minify-js", function() {
+    return gulp.src(["public/scripts/script.js"])
+.pipe(babel({presets: ['es2015']}))
+.pipe(concat("script.min.js"))
+.pipe(uglify().on('error', function(e){
+     console.log(e);
+}))
+.pipe(gulp.dest("public/scripts/"))
 });
